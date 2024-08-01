@@ -11,16 +11,18 @@ for (let i = 0; i < inputarr.length; i++) {
 }
 console.log(order);
 
-const obj = {}
-
-for (let i = 0; i < order.length; i++) {
+function retuned() {
     
-    let flavname = order[i];
-    if (obj[flavname]) {
-        obj[flavname]++
-    } else {
-        obj[flavname] = 1
-    }
-}
+    const obj = {}
 
-console.table(obj);
+    for (let i = 0; i < order.length; i++) {
+        let flavname = order[i];
+        if (obj[flavname]) {
+            obj[flavname]++
+        } else {
+            obj[flavname] = 1
+        }
+    }
+    return obj
+}
+console.table(retuned());
